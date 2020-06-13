@@ -20,12 +20,20 @@
     "sourceType": "module"
   },
   "plugins": [
+    "react",
+    "react-hooks",
     "@typescript-eslint",
     "prettier"
   ],
   "rules": {
+    "prettier/prettier":"error",
+    "react/jsd-one-expression-per-line":"off",
+    "react-hooks/rules-of-hooks":"error",
+    "react-hooks/exhaustive-deps":"warn",
+    "react/jsx-props-no-spreading":"off",
+    "react/jsx-filename-extension":[1, {"extensions": [".tsx"]}],
+    "import/prefer-default-export":"off",
     "no-underscore-dangle": "off",
-    "prettier/prettier": "error",
     "class-methods-use-this": "off",
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/no-unused-vars": ["error", {
@@ -35,7 +43,8 @@
       "error",
       "ignorePackages",
       {
-        "ts": "never"
+        "ts": "never",
+        "tsx":"never"
       }
     ]
   },
