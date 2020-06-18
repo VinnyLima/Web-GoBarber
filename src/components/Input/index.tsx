@@ -1,11 +1,11 @@
 import React, { InputHTMLAttributes, useEffect, useRef } from 'react';
+import { Container } from './styles';
 import { IconBaseProps } from 'react-icons';
 import { useField } from '@unform/core';
-import { Container } from './styles';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
-  icon: React.ComponentType<IconBaseProps>;
+  icon?: React.ComponentType<IconBaseProps>;
 }
 
 const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
